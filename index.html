@@ -18,14 +18,35 @@
     <title>Zomato</title>
   </head>
   <body>
+    <div class="black-cover"></div>
+    <form class="overlay">
+      <div class="heading">
+        <h2>Login</h2>
+        <i class="fa-solid fa-xmark" onclick="closeModal()"></i>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Phone" />
+        <button>Send One Time Password</button>
+      </div>
+      <div class="email-box">
+        <p>or</p>
+        <div class="email">
+          <i class="fa-solid fa-envelope"></i>Continue with Email
+        </div>
+        <div class="gmail">
+          <i class="fa-brands fa-google"></i>Continue with Google
+        </div>
+      </div>
+      <div class="creat-account">New to Zomato? <span>Creat account</span></div>
+    </form>
     <div class="container">
       <div class="home">
         <div class="navbar">
           <div class="first-nav"></div>
           <div class="second-nav">
             <div class="item">Add restaurant</div>
-            <div class="item">Log in</div>
-            <div class="item">Sign up</div>
+            <div class="item" onclick="showModal()">Log in</div>
+            <div class="item" onclick="showModal()">Sign up</div>
             <div class="login-icon">
               <i class="fa-solid fa-user"></i>
             </div>
@@ -52,60 +73,60 @@
           find your next great meal.
         </p>
         <div class="states-list">
-          <div class="stats-names">
+          <a href="./orderSection.html" class="stats-names">
             Kolkata Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Agra Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Ahmedabad Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Ajmer Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Allahabad Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Bengaluru Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Bhopal Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Chandigar Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Chennai Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Cuttak Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Delhi Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Darjeeling Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Goa Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Hydrabad Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Haridwar Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Mumbai Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Noida Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./orderSection.html" class="stats-names">
             Gurgaon Restaurants <i class="fa-solid fa-chevron-right"></i>
-          </div>
+          </a>
         </div>
       </div>
       <!-- countries section -->
@@ -113,23 +134,23 @@
       <div class="all-countries">
         <h1>All Countries</h1>
         <div class="country-list">
-          <div class="stats-names">
+          <a href="./goodbye.html" class="stats-names">
             <span>
               <img
                 src="https://b.zmtcdn.com/images/flags_z10/in.png?output-format=webp"
                 alt=""
               />India</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/us.png?output-format=webp"
                 alt=""
               />Usa</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/au.png?output-format=webp"
@@ -137,8 +158,8 @@
               />Australia</span
             >
             <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/br.png?output-format=webp"
@@ -146,8 +167,8 @@
               />Brasil</span
             >
             <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/ca.png?output-format=webp"
@@ -155,48 +176,48 @@
               />Canada</span
             >
             <i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/cl.png?output-format=webp"
                 alt=""
               />Chile</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/id.png?output-format=webp"
                 alt=""
               />Indonesia</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/za.png?output-format=webp"
                 alt=""
               />South Africa</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/ph.png?output-format=webp"
                 alt=""
               />Philippins</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/pl.png?output-format=webp"
                 alt=""
               />Poland</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/sg.png?output-format=webp"
@@ -204,8 +225,8 @@
               />
               Singapore</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/lk.png?output-format=webp"
@@ -213,55 +234,55 @@
               />
               Sri Lanka</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/ae.png?output-format=webp"
                 alt=""
               />UAE</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/tr.png?output-format=webp"
                 alt=""
               />Turkey</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/gb.png?output-format=webp"
                 alt=""
               />UK</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/qa.png?output-format=webp"
                 alt=""
               />Quatar</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/qa.png?output-format=webp"
                 alt=""
               />Lebanon</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
-          <div class="stats-names">
+          </a>
+          <a href="./goodbye.html" class="stats-names">
             <span
               ><img
                 src="https://b.zmtcdn.com/images/flags_z10/it.png?output-format=webp"
                 alt=""
               />Italy</span
             ><i class="fa-solid fa-chevron-right"></i>
-          </div>
+          </a>
         </div>
       </div>
       <footer>
@@ -332,5 +353,8 @@
         </div>
       </footer>
     </div>
+
+    <!-- javascript part -->
+    <script src="./script.js"></script>
   </body>
 </html>

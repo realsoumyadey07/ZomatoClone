@@ -4,6 +4,113 @@
   font-family: sans-serif, "poppins";
 }
 
+.black-cover {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  z-index: -2;
+}
+.showcover {
+  opacity: 1;
+  z-index: 1;
+}
+.overlay {
+  position: fixed;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  width: 45vmax;
+  max-width: 400px;
+  height: 450px;
+  background: #fff;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.showoverlay {
+  display: flex;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 10%;
+}
+.heading h2 {
+  font-size: 30px;
+  color: #4f4f4f;
+  font-weight: 200;
+}
+.heading i {
+  font-size: 20px;
+}
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 35%;
+}
+.input-box input,
+button {
+  padding: 15px 10px;
+  border-radius: 6px;
+}
+.input-box input {
+  border: 1px solid rgb(207, 207, 207);
+  outline: none;
+}
+.input-box input::placeholder {
+  font-size: 20px;
+}
+.input-box button {
+  border: none;
+  background: rgb(239, 79, 95);
+  color: #fff;
+  font-size: 16px;
+}
+.email-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-basis: 45%;
+  border-top: 1px solid rgb(207, 207, 207);
+  border-bottom: 1px solid rgb(207, 207, 207);
+  position: relative;
+}
+.email-box p {
+  position: absolute;
+  top: -10px;
+  background: #fff;
+  padding: 0 10px;
+}
+.email,
+.gmail {
+  border: 1px solid rgb(207, 207, 207);
+  width: 100%;
+  border-radius: 6px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.creat-account {
+  flex-basis: 10%;
+  display: flex;
+  align-items: flex-end;
+  color: rgb(77, 77, 77);
+  font-size: 16px;
+}
+.creat-account span {
+  color: rgb(239, 79, 95);
+}
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -21,7 +128,9 @@
   gap: 20px;
   font-size: 18px;
   color: rgb(214, 214, 214);
+  cursor: pointer;
 }
+
 .login-icon {
   color: #fff;
   width: 30px;
@@ -58,7 +167,8 @@
   min-height: 100%;
 }
 .state-section {
-  width: 80%;
+  width: 100%;
+  max-width: 1100px;
   margin: auto;
   text-align: center;
   margin-top: 3rem;
@@ -85,10 +195,11 @@
   width: 50px;
 }
 .states-list {
-  width: 70%;
+  width: 100%;
+  max-width: 1100px;
   margin: 60px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 30px;
   justify-content: center;
 }
@@ -103,6 +214,7 @@
   border-radius: 7px;
   padding: 15px;
   box-shadow: rgba(28, 28, 28, 0.08) 0px 1.42623px 2.85246px;
+  text-decoration: none;
 }
 .stats-names:hover {
   box-shadow: 0 6px 10px rgba(28, 28, 28, 0.08);
@@ -119,26 +231,27 @@
   gap: 10px;
 }
 .all-countries {
-  width: 80%;
+  width: 100%;
+  max-width: 1100px;
   margin: auto;
+  text-align: center;
 }
+
 .all-countries h1 {
   width: 55vw;
   margin: auto;
   font-size: 2rem;
   font-weight: 400;
-
 }
 .country-list {
-  width: 70%;
-
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 30px;
   justify-content: center;
-
   margin: 40px auto;
 }
+
 
 /* footer */
 footer {
@@ -149,6 +262,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 95%;
+  max-width: 1100px;
   margin: auto;
 }
 .zomato-logo img {
@@ -158,7 +272,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   margin: 40px auto;
   gap: 20px;
 }
@@ -187,7 +301,7 @@ footer {
 .second-row {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
   margin: auto;
   gap: 30px;
 }
@@ -222,7 +336,7 @@ footer {
 }
 
 .third-row {
-  width: 60%;
+  width: 100%;
   margin: 30px auto;
   border-top: 1px solid rgb(207, 207, 207);
   padding: 20px 0;
@@ -230,7 +344,7 @@ footer {
 .third-row p {
   width: 100%;
   margin: auto;
-  color: rgb(79, 79, 79);
+  color: rgb(124, 124, 124);
   font-size: 13px;
 }
 @media (max-width: 750px) {
@@ -256,6 +370,9 @@ footer {
   .state-section {
     width: 85%;
   }
+  .all-countries{
+    width: 85%;
+  }
   .state-section h1 {
     font-size: 25px;
     color: #2f2f2f;
@@ -267,6 +384,14 @@ footer {
     width: 30px;
   }
 }
+/* @media(max-width:650px){
+  .showoverlay{
+    display: none;
+  }
+  .showcover{
+    opacity: 0;
+  }
+} */
 @media (max-width: 390px) {
   .first-row,
   .second-row,
@@ -277,8 +402,549 @@ footer {
     width: 100%;
   }
 }
-@media (max-width: 460px) {
+/* @media (max-width: 460px) {
   .footer-content {
     width: 100%;
+  }
+} */
+
+/* css for 2nd page */
+.container{
+  position: relative;
+}
+.navbar-2nd {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0;
+}
+.first-row-2nd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+}
+.search-sec {
+  display: flex;
+  align-items: center;
+  flex-basis: 70%;
+}
+.search-sec img {
+  width: 150px;
+}
+.search-location {
+  display: flex;
+  margin-left: 5%;
+  border: 1px solid rgb(232, 232, 232);
+  width: 100%;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+}
+
+.search-location input {
+  flex-basis: 80%;
+  border: none;
+  outline: none;
+}
+.location {
+  display: flex;
+  flex-basis: 30%;
+}
+.location p {
+  width: 70%;
+  margin-left: 10px;
+  color: rgb(136, 136, 136);
+}
+.location .fa-location-dot {
+  color: rgb(239, 79, 95);
+  font-size: 20px;
+}
+.search-icon {
+  border-left: 2px solid rgb(192, 192, 192);
+  padding: 0 10px;
+}
+.search-icon i {
+  color: rgb(136, 136, 136);
+  font-size: 20px;
+}
+.search-location input::placeholder {
+  font-size: 16px;
+  color: rgb(136, 136, 136);
+  padding: 0 10px;
+}
+.login-sec {
+  display: flex;
+  flex-basis: 200px;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.login-sec a {
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+  font-size: 18px;
+}
+.login-sec i{
+  color:rgb(239, 79, 95) ;
+  font-size: 20px;
+  display: none;
+}
+
+.second-row-2nd {
+  display: flex;
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  font-size: 12px;
+  color: #a3a3a3;
+  padding: 30px 0;
+  gap: 10px;
+  overflow: hidden;
+}
+.second-row-2nd p:nth-child(4) {
+  color: #cbcbcb;
+}
+.third-row-2nd {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  gap: 50px;
+}
+.scooter-logo,
+.dining-logo,
+.night-out {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.scooter-logo img {
+  width: 40px;
+}
+.dining-logo img {
+  width: 40px;
+}
+.night-out img {
+  width: 40px;
+}
+.scooter-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgb(248, 248, 248);
+}
+.dining-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgb(248, 248, 248);
+}
+.nightout-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgb(248, 248, 248);
+}
+
+.forth-row-2nd{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  width:95%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+.rilters,.cuisines,.rating{
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 8px;
+  padding: 8px 20px;
+}
+.food-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.food-section h1{
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+}
+.food-items{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  width: 95%;
+  max-width: 1100px;
+  margin: 30px auto;
+  gap: 20px;
+}
+.item-containers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-containers img{
+  width: 280px;
+  height: 230px;
+  border-radius: 15px;
+}
+.about-item{
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  padding: 10px;
+}
+.right-items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.right-items h3, .left-items h3{
+  font-size: 17px;
+  color: rgb(28, 28, 28);
+}
+.right-items p, .left-items p{
+  font-size: 14px;
+  color: rgb(105, 105, 105);
+}
+.right-items .rating2nd{
+  background: rgb(58, 183, 87);
+  color: #fff;
+  width: 35px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+}
+.right-items .rating2nd i{
+  font-size: 10px;
+}
+.nearme-section{
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgb(252, 252, 252);
+}
+.nearme-section h1{
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  font-weight: 300;
+}
+.nearme-section .popular-cuisines{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  max-width: 1100px;
+  border: 1px solid rgb(232, 232, 232);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-sizing: border-box;
+  
+}
+.drop-dwon-2nd p{
+  font-size: 20px;
+  color: #464646;
+}
+.popular-cuisines-about,
+.popular-cuisines-about-2nd,
+.popular-cuisines-about-3rd{
+  color: #6e6e6e;
+  margin-top: 10px;
+  line-height: 50px;
+  display: none;
+}
+.popular-cuisines-about-display{
+  display: block;
+}
+.drop-dwon-2nd{
+  display: flex;
+  justify-content: space-between;
+}
+.popular-localities{
+  width: 100%;
+}
+.popular-localities h1{
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  color: #515151;
+  font-weight: 300;
+  /* font-size: 3vmax; */
+}
+.popular-localities h1 span{
+  font-weight: 600;
+  color: rgb(44, 44, 44);
+}
+.popular-localities-places h3{
+  font-size: 20px;
+  font-weight: 200;
+  color: #4b4b4b;
+
+}
+.popular-localities-places p{
+  font-size: 15px;
+  font-weight: 300;
+  color: #666666;
+}
+.country-list{
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.collection-section h1{
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+.collection-section p{
+  width: 95%;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+.restaurent-section-2nd{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: center; */
+  width: 95%;
+  max-width: 1100px;
+  margin: 40px auto;
+  gap: 20px;
+}
+.first-place-2nd{
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.first-place-2nd:hover img{
+  transform: scale(1.3);
+}
+.first-place-2nd img{
+  width: 100%;
+  min-width: 170px;
+  height: 270px;
+  border-radius: 10px;
+  transition: .5s;
+}
+.first-place-2nd p{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+}
+@media (max-width:1000px){
+  .login-sec a{
+    display: none;
+  }
+  .search-location{
+    display: none;
+  }
+  .login-sec i{
+    display:flex;
+  }
+  .second-row-2nd{
+    display: none;
+  }
+  .third-row-2nd{
+    display: none;
+  }
+  .forth-row-2nd div{
+    font-size: 80%;
+  }
+  .rilters,.cuisines,.rating{
+    display: flex;
+    gap: 6px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 8px;
+    padding: 5px 14px;
+  }
+  .first-row-2nd{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 6px -6px;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .navbar-2nd{
+    padding: 0;
+    
+  }
+  
+}
+@media (max-width:700px){
+  html{
+    font-size: 60%;
+  }
+}
+
+
+
+/* 3rd pages css */
+.home-3rd{
+  background: url("./images/goodbyrbackground.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+}
+.navbar-3rd{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+.get-the-app{
+  display: flex;
+  gap: 10px;
+  color: #fff;
+}
+.login-signin{
+  display: flex;
+  gap: 40px;
+}
+.login-signin p{
+  color: #fff;
+}
+.zomato-logo-3rd{
+  width: 100%;
+  max-width: 1100px;
+  margin: 4% auto;
+  text-align: center;
+}
+.zomato-logo-3rd img{
+  width: 250px;
+}
+.goodbye-3rd{
+  width: 95%;
+  max-width: 1100px;
+  margin: 50px auto;
+  text-align: center;
+  color:rgb(102, 26, 0) ;
+}
+.goodbye-3rd h1{
+  font-size: 50px;
+}
+.goodbye-para-3rd{
+  width: 95%;
+  max-width: 1100px;
+  margin: 40px auto;
+  text-align: center;
+  font-size: 25px;
+}
+.goodbye-para-3rd p{
+  color: rgb(102, 26, 0);
+}
+.goodbye-para-3rd p span{
+  font-weight: 600;
+}
+.location-3rd{
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  width: 100%;
+  max-width: 260px;
+  margin: 5% auto;
+  padding: 20px;
+  justify-content: center;
+}
+.location-3rd i{
+  flex-basis: 10%;
+  color: rgb(239, 79, 95);
+  font-size: 20px;
+}
+.location-3rd p{
+  flex-basis: 80%;
+  color: #7f7f7f;
+}
+.where-are-we-3rd{
+  width: 95%;
+  max-width: 1100px;
+  text-align: center;
+  margin: 40px auto;
+}
+.about-where-are-we-3rd{
+  width: 95%;
+  max-width: 1100px;
+  text-align: center;
+  margin: 30px auto;
+}
+.india-uae-section-3rd{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 95%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+.india-3rd,.uae-3rd{
+  width: 40%;
+  min-width: 260px;
+  box-shadow: rgba(28, 28, 28, 0.08) 0px 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  border-radius: 15px;
+}
+
+.india-3rd img,.uae-3rd img{
+  width: 60%;
+}
+.where-are-we-3rd{
+  font-size: 25px;
+  color: #4b4b4b;
+}
+.about-where-are-we-3rd p{
+  font-size: 20px;
+  color: #4b4b4b;
+}
+@media (max-width:700px){
+  .zomato-logo-3rd img{
+    width: 200px;
+  }
+  .goodbye-3rd h1{
+    font-size:30px ; 
+  }
+  .goodbye-para-3rd p{
+    font-size: 15px;
+  }
+  .where-are-we-3rd{
+    font-size: 15px;
+  }
+  .about-where-are-we-3rd p{
+    font-size: 15px;
+  }
+}
+@media (max-width:350px){
+  .location-3rd{
+    width: 70%;
+    max-width: none;
   }
 }
